@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type = 'text/css'>
+	table{
+		border: 2px solid green;
+		border-spacing: 0;
+		width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	td{
+		border: 1px dashed blue;
+		font-family: Calibri;
+		font-size: 20px;
+		border-radius: 5px;
+		text-align: center;
+	};
+	th{
+		border 1px dashed red;
+		font-family: Calibri;
+		font-size: 20px;
+		border-radius: 10px;
+		background-color: #99ffaa;
+	}
+	.empty{
+		background-color: #ffffff;
+	}
+	.stil1{
+		font-family: Calibri;
+		font-size: 18px;
+		color: #CC2233;
+	}
+	.stil2{
+		font-family: "Times New Roman";
+		font-size: 10px;
+		color: #00CC00;
+	}
+	.stil3{
+		font-family: Verdana;
+		font-size: 20px;
+		color: #FF0000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.stil4{
+		font-family: Arial;
+		font-size: 16px;
+		color: #0022CC;
+	}
+	.stil5{
+		font-family: Courier;
+		font-size: 11px;
+		color: #000000;
+	}
+	</style>
+	<title>Trgovina Sve u pola cijene</title>
+</head>
+<body>
+	<span class = 'stil4'>Točno vrijeme: {{ vrijeme }}</span>
+	<br>
+	<span class = 'stil3'>U ovoj trgovini svaki proizvod možete kupiti u pola cijene.</span>
+	<br>
+	<h1>Radno vrijeme</h1>
+	<table>
+		<tr>
+			<th>SAT</th>
+			<th>PONEDJELJAK</th>
+			<th>UTORAK</th>
+			<th>SRIJEDA</th>
+			<th>ČETVRTAK</th>
+			<th>PETAK</th>
+		</tr>
+		<tr>
+			<td>8:00</td>
+			<td rowspan = '8'>DA</td>
+			<td rowspan = '2'>DA</td>
+			<td rowspan = '4'>NE</td>
+			<td>DA</td>
+			<td>NE</td>
+		</tr>
+		<tr>
+			<td>16:00</td>
+		</tr>	
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="stylesheet" href="{% static 'css/stil.css' %}">
+	<title>Trgovina Sve u pola cijene - Popis proizvoda</title>
+</head>
+<body>
+	<h1>Proizvodi</h1>
+	<table>
+		<tr>
+			<th>Ime</th>
+			<th>Kod</th>
+			<th>Cijena</th>
+		</tr>
+		{% for p in data%}
+			{% if forloop.counter|divisibleby:2 %}
+			<tr class = "bg1">
+			{% else %}
+			<tr class = "bg2">
+			{% endif %}
+				<td>{{p.Ime}}</td>
+				<td>{{p.Kod}}</td>
+				<td>{{p.Cijena}}</td>
+				<td>
+					<a href="{% url 'pr_edit' ID=p.id %}">Izmijeni</a>
+					<a href="{% url 'pr_delete' ID=p.id %}" class="brisi">Obriši</a>
+				</td>
+			</tr>
+		{% endfor %}
+		<tr>
+			<td colspan="3">
+				<a href="add">Dodaj proizvod</a>
+			</td>
+		</tr>
+	</table>
+	<div id="dialogTemplate"></div>
+</body>
+</html>

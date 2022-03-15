@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+</head>
+<html>
+<body>
+	<form method="POST" action="proizvodi/delete/{{proizvod.id}" id="brisanje"}>
+	{{ form }}
+	{% csrf_token %}
+	</form>
+	<span>
+		Jeste li sigurni da želite obrisati proizvod: 
+		{{proizvod.Ime}} {{proizvod.Kod}}?
+	</span>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="stylesheet" href="{% static 'css/stil.css' %}">
+	<title>Trgovina Sve u pola cijene - Dodavanje proizvoda</title>
+</head>
+<body>
+	<h1>Proizvodi - dodavanje</h1>
+	<form method="POST">
+		<table>
+			{{ form.as_table }}
+			{% csrf_token %}
+			<tr><td><input type="submit" value="Spremi"/></td></tr>
+		</table>
+	</form>
+</body>
+</html>
